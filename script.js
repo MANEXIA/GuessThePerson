@@ -115,13 +115,13 @@ function shuffleArray(arr) {
 
 let mdl = document.getElementById('modal-res')
 function test(){
-    mdl.classList.add('moddal-alert')
- 
+    mdl.classList.remove('show-green')
+    mdl.classList.remove('show-red')
    
     if((Math.floor(Math.random() * 2 + 1)) == 1){
-        mdl.classList.add('moddal-alert-show-crt')
+        mdl.classList.add('moddal-alert', 'show-green')
     }else{
-        mdl.classList.add('moddal-alert-show-wrg')
+        mdl.classList.add('moddal-alert', 'show-red')
     }
     
 }

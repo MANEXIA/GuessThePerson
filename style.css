@@ -26,17 +26,17 @@
     justify-self: center;
     transform: translateY(-100px); 
     transition: all 0.4s ease;
+    opacity: 0;
 }
 
 
-
-.moddal-alert-show-crt{
+.moddal-alert.show-green{
     background-color: rgb(54, 213, 110);
     transform: translateY(50px); 
     opacity: 1;
 }
 
-.moddal-alert-show-wrg{
+.moddal-alert.show-red{
     background-color: rgb(213, 70, 54);
     transform: translateY(50px); 
     opacity: 1;
