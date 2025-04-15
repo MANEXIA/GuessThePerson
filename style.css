@@ -13,7 +13,6 @@
    box-sizing: border-box;
 }
 
-
 .moddal-alert{
     display: flex;
     flex-direction: column;
@@ -25,21 +24,21 @@
     border-radius: 10px;
     font-size: 1.25rem;
     justify-self: center;
-    top: -60px;
+    transform: translateY(-100px); 
     transition: all 0.4s ease;
-    opacity: 0;
 }
+
 
 
 .moddal-alert-show-crt{
     background-color: rgb(54, 213, 110);
-    top: 50px;
+    transform: translateY(50px); 
     opacity: 1;
 }
 
 .moddal-alert-show-wrg{
     background-color: rgb(213, 70, 54);
-    top: 50px;
+    transform: translateY(50px); 
     opacity: 1;
 }
 
