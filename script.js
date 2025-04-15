@@ -1,6 +1,5 @@
 "user-strict"
 
-
 window.addEventListener('DOMContentLoaded', () => {
     fetchAndDisplayData();
 });
@@ -114,8 +113,10 @@ function shuffleArray(arr) {
     return arr;
 }
 
-
-
+let mdl = document.getElementById('modal-res')
+function test(){
+    mdl.classList.add('moddal-alert', 'moddal-alert-show')
+}
 
 
     //FETCH MY METHOD

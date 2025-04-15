@@ -14,9 +14,26 @@
 }
 
 
-/* .moddal-alert{
+.moddal-alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(54, 213, 110);
     position: absolute;
-} */
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    justify-self: center;
+    top: -70px;
+    transition: all 0.3s ease;
+}
+
+
+.moddal-alert-show{
+    top: 50px;
+}
 
 
 body{
@@ -58,10 +75,14 @@ ul li{
 }
 
 .container{
+
+    position: relative;
     background-color: var(--bg-main);
     width: 100%;  
     max-width: 100vw; 
     height: 100vh;
+
+
 }
 
 .row{
