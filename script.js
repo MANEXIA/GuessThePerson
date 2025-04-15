@@ -115,13 +115,19 @@ function shuffleArray(arr) {
 
 let mdl = document.getElementById('modal-res')
 function test(){
-    mdl.classList.remove('show-green')
-    mdl.classList.remove('show-red')
+    mdl.classList.remove('modal-fade', 'show-green')
+    mdl.classList.remove('modal-fade', 'show-red')
    
     if((Math.floor(Math.random() * 2 + 1)) == 1){
-        mdl.classList.add('moddal-alert', 'show-green')
+        
+        requestAnimationFrame(() => {
+            mdl.classList.add('modal-fade', 'show-green')
+             });  
     }else{
-        mdl.classList.add('moddal-alert', 'show-red')
+
+        requestAnimationFrame(() => {
+            mdl.classList.add('modal-fade', 'show-red')
+             });  
     }
     
 }
