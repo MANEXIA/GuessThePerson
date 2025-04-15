@@ -11,6 +11,9 @@ let correctScore = document.getElementById('correct-ans')
 let wrongScore = document.getElementById('wrong-ans')
 
 
+
+let mdl = document.getElementById('modal-res')
+
 function fetchAndDisplayData() {
 //FETCH TRENDS/TOP GAMES INFO
 fetch(apiUrl).then(res => res.json()).then(data => {
@@ -69,16 +72,25 @@ fetch(apiUrl).then(res => res.json()).then(data => {
                              document.querySelectorAll('.random-images').forEach(img => {
 
                                 img.addEventListener('click', () => {
-                                    
+                                            mdl.classList.remove('modal-fade', 'show-green')
+                                            mdl.classList.remove('modal-fade', 'show-red')
                                             let x = wrongScore.innerHTML
                                             let y = correctScore.innerHTML 
 
                                             if(img.src == item.picture.large){
                                                 correctScore.innerHTML = Number(y) + 1
-                                                alert('Correct!')
+                                                requestAnimationFrame(() => {
+                                                    mdl.innerHTML = "<p>Correct!</p>"
+                                                    mdl.classList.add('modal-fade', 'show-green')
+                                                     });  
+
+
                                             }else{
                                                 wrongScore.innerHTML = Number(x) + 1
-                                                alert('Wrong!')
+                                                requestAnimationFrame(() => {
+                                                    mdl.innerHTML = "<p>Wrong!</p>"
+                                                    mdl.classList.add('modal-fade', 'show-red')
+                                                     }); 
                                             }
 
                                            
@@ -113,24 +125,10 @@ function shuffleArray(arr) {
     return arr;
 }
 
-let mdl = document.getElementById('modal-res')
-function test(){
-    mdl.classList.remove('modal-fade', 'show-green')
-    mdl.classList.remove('modal-fade', 'show-red')
-   
-    if((Math.floor(Math.random() * 2 + 1)) == 1){
-        
-        requestAnimationFrame(() => {
-            mdl.classList.add('modal-fade', 'show-green')
-             });  
-    }else{
 
-        requestAnimationFrame(() => {
-            mdl.classList.add('modal-fade', 'show-red')
-             });  
-    }
+
+
     
-}
 
 
     //FETCH MY METHOD

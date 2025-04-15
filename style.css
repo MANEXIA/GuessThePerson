@@ -24,12 +24,12 @@
     border-radius: 10px;
     font-size: 1.25rem;
     justify-self: center;
+    transform: translateY(-150px); 
 }
 
 
 .modal-fade{
-    transform: translateY(-100px); 
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
     opacity: 0;
 }
 
